@@ -1,13 +1,16 @@
 import { Container, Background, Content, AnimationContainer } from "./styles";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import {FiUser, FiMail, FiLock} from "react-icons/fi"
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import api from "../../services/api"
+import { toast } from "react-toastify"
 
-const SignUp = () => {
+const SignUp = ({isAuthenticated}) => {
 
   const formSchema = yup.object().shape({
     name: yup.string().required('Campo obrigatório!'),
@@ -24,8 +27,19 @@ const SignUp = () => {
     resolver: yupResolver(formSchema)
   })
 
-  const onSubmitFuncion = (data) => {
-    console.log(data)
+  const history = useHistory()
+
+  const onSubmitFuncion = ({ name, email, password }) => {
+    const user = { name, email, password }
+    api
+    .post("/user/register", user)
+    .then((_) => toast.success("Sucesso ao criar a conta"))
+    return history.push("/login")
+    .catch((err) => toast.error("Erro ao criar a conta, tente outro Email"))
+  }
+
+  if (isAuthenticated){
+    return <Redirect to="/dashboard"/>
   }
 
   return (

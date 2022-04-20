@@ -24,10 +24,10 @@ width: 100%;
 max-width: 700%;
 `
 
-const AppearFromRight = keyframes`
+const AppearFromLeft = keyframes`
 from{
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(-50px);
 }
 
 to {
@@ -40,7 +40,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-animation: ${AppearFromRight} 1s;
+animation: ${AppearFromLeft} 1s;
 
 form{
 margin: 80px 0;
