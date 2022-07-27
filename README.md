@@ -1,3 +1,10 @@
-# DO-IT
+# Do-it
 
-O doit foi um projeto desenvolvido dentro como atividade extra no terceiro módulo do Front End na Kenzie Academy Brasil. O objetivo dessa aplicação era treinar todos os conceitos aprendidos até então dentro de uma proposta simples, uma todo-list. O projeto utilizou de bibliotecas de estilização, notificação, requisição, rotas, formulário e validações. Além de ter sido um ótimo exercício de organização de repositório e boas práticas de código.
+## 1. Sobre
+
+    O Doit foi uma to-do list desenvolvida em ReactJS como forma de treinar boas práticas de organização de repositório e estilos globais com styledComponents. O projeto comunica com uma API educacional produzida pelo time da Kenzie Academy.
+
+
+## 2. Links Relevantes
+
+- <a name="deploy-vercel" href="https://kenzie-hub-kappa-sable.vercel.app/" target="_blank">Deploy @ Vercel</a>
