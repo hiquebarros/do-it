@@ -7,4 +7,4 @@
 
 ## 2. Links Relevantes
 
-- <a name="deploy-vercel" href="https://kenzie-hub-kappa-sable.vercel.app//" target="_blank">Deploy @ Vercel</a>
+- <a name="deploy-vercel" href="https://do-it-delta.vercel.app/" target="_blank">Deploy @ Vercel</a>
